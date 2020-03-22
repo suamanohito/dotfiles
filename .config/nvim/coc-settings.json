@@ -1,0 +1,5 @@
+{
+  "solargraph.commandPath": "solargraph",
+  "solargraph.bundlerPath": "bundle",
+  "codeLens.enable": true
+}

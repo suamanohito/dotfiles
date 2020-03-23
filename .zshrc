@@ -90,3 +90,8 @@ alias gp='gem pristine'
 alias sz='source ~/.zshrc'
 alias c='clear'
 
+## Git
+alias gi='git init'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push'

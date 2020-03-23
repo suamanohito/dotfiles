@@ -1,5 +1,4 @@
 source $HOME/.zshenv
-export PATH="$HOME/bin:$PATH"
 
 # --------------------------------------------------
 # #  カレントディレクトリ表示（左）
@@ -77,10 +76,12 @@ alias bib='bundle install --binstubs --path vendor/bundle'
 alias bc="bundle config --global path 'vendor/bundle'"
 
 ## rbenv
+alias ri='rbenv install'
 alias re='rbenv exec'
 alias rl='rbenv local'
 alias rg='rbenv global'
 alias rh='rbenv rehash'
+alias rv='rbenv versions'
 
 ## gem
 alias guall='gem uninstall -I -a -x --user-install --force'

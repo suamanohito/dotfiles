@@ -8,8 +8,6 @@ set noswapfile
 set noundofile
 " 保存されていないファイルがあるときでも別のファイルを開けるようにする
 set hidden
-" バックアップディレクトリの指定(でもバックアップは使ってない)
-set backupdir=$HOME/.vimbackup
 " バッファで開いているファイルのディレクトリでエクスクローラを開始する(でもエクスプローラって使ってない)
 set browsedir=buffer
 " 画面を縦分割する際に右に開く

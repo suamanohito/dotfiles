@@ -1,14 +1,75 @@
 source $HOME/.zshenv
+export PATH="$HOME/bin:$PATH"
+
+# --------------------------------------------------
+# #  カレントディレクトリ表示（左）
+# --------------------------------------------------
+
+PROMPT='
+%F{green}%* %n %(5~,%-1~/.../%2~,%F{yellow}【%~】)%f
+%F{green}%B>%b%f'
+
+# # --------------------------------------------------
+# #  git branch状態を表示（右）
+# # --------------------------------------------------
+
+autoload -Uz vcs_info
+setopt prompt_subst
+
+# # --------------------------------------------------
 
 if [ -f $(brew --prefix)/etc/brew-wrap ];then
   source $(brew --prefix)/etc/brew-wrap
 fi
 
+# Ctrl+Dでログアウトしてしまうことを防ぐ
+setopt IGNOREEOF
+
+# # 日本語を使用
+export LANG=ja_JP.UTF-8
+
+# # 色を使用
+autoload -Uz colors
+colors
+
+# 補完
+autoload -Uz compinit
+compinit
+# ファイル補完候補に色を付ける
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# emascキーバインド
+bindkey -e
+
 # コマンド履歴の保存に関する設定
-HISTFILE=~/.zhistory           # 履歴の場所。なければ勝手に作られ chmod 600 されます
-SAVEHIST=500                   # ファイルに保存する件数。bashのデフォルトと同じにしてみました
-HISTSIZE=$(($SAVEHIST * 2))    # メモリに蓄える件数
-setopt HIST_EXPIRE_DUPS_FIRST  # 単に古いコマンドより、重複コマンドの方を優先的に忘れるオプション
+# 他のターミナルとヒストリーを共有
+setopt share_history
+# ヒストリーに重複を表示しない
+setopt histignorealldups
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+# エイリアス
+alias lst='ls -ltr --color=auto'
+alias l='ls -ltr --color=auto'
+alias la='ls -la --color=auto'
+alias ll='ls -l --color=auto'
+alias so='source'
+alias soz='source ~/.zshrc'
+alias v='nvim'
+alias vi='nvim'
+alias vz='nvim ~/.zshrc'
+alias c='cdr'
+
+# historyに日付を表示
+alias h='fc -lt '%F %T' 1'
+alias cp='cp -i'
+alias rm='rm -i'
+alias mkdir='mkdir -p'
+alias ..='c ../'
+alias back='pushd'
+alias diff='diff -U1'
 
 ## bundle
 alias be='bundle exec'

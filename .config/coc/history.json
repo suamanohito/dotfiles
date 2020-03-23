@@ -2,6 +2,9 @@
   "lists": {
     "%2FUsers%2Fyuto": [
       "symbols"
+    ],
+    "%2Fhome%2Fsuama": [
+      "ROMPT='%F{green}%(5~,%-1~/.../%2~,%~)%f%F{green}%B●%b%f'# --------------------------------------------------#  git branch状態を表示（右）# --------------------------------------------------autoload -Uz vcs_infosetopt prompt_substjuujjkkuuuukkjjkkjjjjj"
     ]
   }
 }

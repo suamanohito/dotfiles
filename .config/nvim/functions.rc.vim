@@ -32,9 +32,43 @@ let g:coc_global_extensions = ['coc-solargraph']
 """"""""""""""""""""""""""""""
 " v907th/vim-auto-save
 """"""""""""""""""""""""""""""
-let g:auto_save = 1
+" let g:auto_save = 1
 
 """"""""""""""""""""""""""""""
 " vnathanaelkane/vim-indent-guides
 """"""""""""""""""""""""""""""
 let g:indent_guides_enable_on_vim_startup = 1
+""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" w0rp/ale
+""""""""""""""""""""""""""""""
+" let g:ale_fix_on_save = 1
+
+let g:ale_sign_column_always = 1
+
+let g:ale_sign_error = '!!'
+let g:ale_sign_warning = '=='
+
+let g:ale_fixers = {
+\   'ruby': ['rubocop'],
+\}
+
+let g:lightline = {
+  \'active': {
+  \  'left': [
+  \    ['mode', 'paste'],
+  \    ['readonly', 'filename', 'modified', 'ale'],
+  \  ]
+  \},
+  \'component_function': {
+  \  'ale': 'ALEGetStatusLine'
+  \}
+\ }
+
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+""""""""""""""""""""""""""""""

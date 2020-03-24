@@ -6,7 +6,7 @@ source $HOME/.zshenv
 
 PROMPT='
 %F{green}%* %n %(5~,%-1~/.../%2~,%F{yellow}【%~】)%f
-%F{green}%B>%b%f'
+%F{green}%B$%b%f'
 
 # # --------------------------------------------------
 # #  git branch状態を表示（右）
@@ -27,15 +27,19 @@ setopt IGNOREEOF
 # # 日本語を使用
 export LANG=ja_JP.UTF-8
 
-# # 色を使用
+### Color
+## 色を使用
 autoload -Uz colors
 colors
-
+# change 'ls' color
+export CLICOLOR=1;
+export LSCOLORS=gxfxcxdxbxegedabagacad;
+export LS_COLORS="di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43:"
 # 補完
 autoload -Uz compinit
 compinit
 # ファイル補完候補に色を付ける
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
 
 # emascキーバインド
 bindkey -e
@@ -50,10 +54,10 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # エイリアス
-alias lst='ls -ltr --color=auto'
-alias l='ls -ltr --color=auto'
-alias la='ls -la --color=auto'
-alias ll='ls -l --color=auto'
+alias lst='ls -ltr'
+alias l='ls -ltr'
+alias la='ls -la'
+alias ll='ls -l'
 alias so='source'
 alias soz='source ~/.zshrc'
 alias v='nvim'

@@ -41,4 +41,7 @@ Plug 'yuku-t/vim-ref-ri'
 Plug 'itchyny/lightline.vim'
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" w0rp/ale
+Plug 'w0rp/ale'
+
 call plug#end()

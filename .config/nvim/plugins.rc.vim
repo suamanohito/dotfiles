@@ -43,5 +43,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " w0rp/ale
 Plug 'w0rp/ale'
-
+" vim-gitgutter
+Plug 'airblade/vim-gitgutter'
+" tpope/vim-fugitive
+Plug 'tpope/vim-fugitive'
 call plug#end()

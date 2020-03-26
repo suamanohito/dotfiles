@@ -5,7 +5,7 @@ source $HOME/.zshenv
 # --------------------------------------------------
 
 PROMPT='
-%F{green}%* %n %(5~,%-1~/.../%2~,%F{yellow}【%~】)%f
+%F{green}%* %n %F{yellow} %(5~,%-1~/.../%2~,【%~】)%f
 %F{green}%B$%b%f'
 
 # # --------------------------------------------------
@@ -97,6 +97,8 @@ alias c='clear'
 
 ## Git
 alias gi='git init'
-alias ga='git add .'
-alias gc='git commit -m'
+alias gs='git status'
+alias gl='git log'
+alias ga='git add -A'
+alias gm='git commit -m'
 alias gp='git push'

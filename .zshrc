@@ -96,9 +96,18 @@ alias sz='source ~/.zshrc'
 alias c='clear'
 
 ## Git
+alias gb='git branch'
 alias gi='git init'
 alias gs='git status'
 alias gl='git log'
 alias ga='git add -A'
-alias gm='git commit -m'
+alias co='git checkout'
+alias gm='git merge'
+alias gcom='git commit'
+# addしてコミット
+alias gcoma='git commit -a'
 alias gp='git push'
+# ブランチを作成してチェックアウト
+alias gcb='git checkout -d'
+# 全てのブランチをグラフで見る
+alias glg='git log --oneline --decorate --graph --all'

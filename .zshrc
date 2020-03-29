@@ -1,5 +1,8 @@
 source $HOME/.zshenv
 
+export EDITOR=/usr/local/bin/nvim
+export GIT_EDITOR=/usr/local/bin/nvim
+
 # --------------------------------------------------
 # #  カレントディレクトリ表示（左）
 # --------------------------------------------------
@@ -103,7 +106,7 @@ alias gl='git log'
 alias ga='git add -A'
 alias co='git checkout'
 alias gm='git merge'
-alias gcom='git commit'
+alias com='git commit'
 # addしてコミット
 alias gcoma='git commit -a'
 alias gp='git push'
@@ -111,3 +114,6 @@ alias gp='git push'
 alias gcb='git checkout -d'
 # 全てのブランチをグラフで見る
 alias glg='git log --oneline --decorate --graph --all'
+
+# Ruby
+alias rubo='rubocop -a'

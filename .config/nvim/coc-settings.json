@@ -2,7 +2,6 @@
   "solargraph.commandPath": "solargraph",
   "solargraph.bundlerPath": "bundle",
   "solargraph.autoformat": true,
-  "solargraph.formatting": true,
   "solargraph.hover": true,
   "codeLens.enable": true,
   "coc.preferences.formatOnSaveFiletypes": ["ruby"]

@@ -32,7 +32,7 @@ let g:coc_global_extensions = ['coc-solargraph']
 """"""""""""""""""""""""""""""
 " v907th/vim-auto-save
 """"""""""""""""""""""""""""""
-" let g:auto_save = 1
+let g:auto_save = 1
 
 """"""""""""""""""""""""""""""
 " vnathanaelkane/vim-indent-guides
@@ -71,4 +71,8 @@ let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" airblade/vim-gitgutter
 """"""""""""""""""""""""""""""

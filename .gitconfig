@@ -3,3 +3,5 @@
 	email = gentle.jena3@gmail.com
 [pull]
 	ff = only
+[core]
+	editor = nvim

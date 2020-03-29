@@ -15,6 +15,8 @@ Plug 'tpope/vim-fugitive'
 " Ruby向けにendを自動挿入してくれる
 Plug 'tpope/vim-endwise'
 " コメントON/OFFを手軽に実行
+" gccでコメントアウト切り替え
+" visualモードで選択後、gcでまとめてコメントアウト
 Plug 'tomtom/tcomment_vim'
 " シングルクオートとダブルクオートの入れ替え等
 Plug 'tpope/vim-surround'

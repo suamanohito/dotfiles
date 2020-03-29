@@ -129,3 +129,5 @@ set ignorecase
 " 検索ワードの最初の文字を入力した時点で検索を開始する
 set incsearch
 
+"" Git
+set diffopt+=vertical
